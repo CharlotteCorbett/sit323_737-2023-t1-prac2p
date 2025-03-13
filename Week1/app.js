@@ -5,14 +5,14 @@ const express = require('express');
 // Requiring path which finds the path to our index.html file.
 const path = require('path');
 
-// Initiates our app andd calls express into our app.
+// Initiates our app and calls express.
 const app = express();
 
 // Initiates our port constant, which can be changed here
 const port = 3000;
 
 // Sends request using the path module which finds and gets our 
-// index.html file then sends it to express.
+// static index.html file then sends it to express.
 app.get('/', (request, response) => {
     response.sendFile(path.join(__dirname, './index.html'));
 });
